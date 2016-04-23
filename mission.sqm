@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8294.7178,300.87607,2148.7842};
-		dir[]={-0.61112291,-0.54370946,-0.57531166};
-		up[]={-0.39593267,0.8392303,-0.37273178};
-		aside[]={-0.68547344,-4.5062916e-007,0.72814322};
+		pos[]={8307.0107,351.48306,2041.9283};
+		dir[]={0.073544838,-0.37984067,0.92216933};
+		up[]={0.030203404,0.92501807,0.37872058};
+		aside[]={0.99687409,-5.2069663e-007,-0.079503506};
 	};
 };
 binarizationWanted=0;
@@ -137,10 +137,90 @@ randomSeed=8620473;
 class ScenarioData
 {
 	author="T. Johnson";
+	disabledAI=1;
 };
 class CustomAttributes
 {
 	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=1;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="None";
+							};
+						};
+					};
+				};
+			};
+		};
+		class Attribute2
+		{
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		nAttributes=3;
+	};
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -170,7 +250,6 @@ class Mission
 	class Intel
 	{
 		briefingName="=[TAKISTAN - NFOR]= Vanilla v2.6";
-		overviewText="By M4RT14L";
 		resistanceWest=0;
 		resistanceEast=1;
 		startWeather=0.39999998;
@@ -182,8 +261,8 @@ class Mission
 		forecastLightnings=0.099999994;
 		year=2018;
 		month=3;
-		hour=5;
-		minute=1;
+		hour=6;
+		minute=0;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
 	};
@@ -23622,7 +23701,7 @@ class Mission
 			};
 			id=1237;
 			type="rhsusf_m113d_usarmy";
-			atlOffset=3.0517578e-005;
+			atlOffset=6.1035156e-005;
 		};
 		class Item1043
 		{
@@ -23639,7 +23718,6 @@ class Mission
 			};
 			id=1238;
 			type="rhsusf_m113d_usarmy";
-			atlOffset=-3.0517578e-005;
 		};
 		class Item1044
 		{

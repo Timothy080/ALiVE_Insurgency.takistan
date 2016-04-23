@@ -19,7 +19,7 @@ call compile preprocessFileLineNumbers "removeTasks.sqf";
 //------------------------------//
   
 if (hasInterface) then {
-	titleText ["Created by M4RT14L...", "BLACK IN",9999];
+	titleText ["Created by M4RT14L... Edits by WO1 T. Johnson", "BLACK IN",9999];
 	0 fadesound 0;
 
 	private ["_cam","_camx","_camy","_camz","_object"];
@@ -41,7 +41,7 @@ if (hasInterface) then {
 	
 	_cam camsetpos [_camx -15 ,_camy + 15,_camz+3];
 	
-	titleText ["A L i V E - N A T O F O R", "BLACK IN",10];
+	titleText ["A L i V E - TAKISTAN INSURGENCY", "BLACK IN",10];
 	10 fadesound 0.9;
 	_cam CamCommit 20;
 	sleep 5;

@@ -15,7 +15,7 @@ class Header
 	playerCountMultipleOf = 1;
 };
 
-author = "M4RT14L";
+author = "Original by M4RT14L Edits by WO1 T. Johnson";
 onLoadName = "TAKISTAN INSURGENCY";
 onLoadMission = "Terrorist forces try to gain control of Takistan and enter the fight to drive out Task Force TRIUMPH";
 loadScreen = "pics\logo.jpg";
