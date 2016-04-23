@@ -18331,8 +18331,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={388.07724,342.83368,2346.418};
-				angles[]={0.28040987,0,0.12415794};
+				position[]={388.077,342.83365,2346.418};
+				angles[]={0.2804046,0,0.12416272};
 			};
 			id=1172;
 			type="ALiVE_SYS_playeroptions";
@@ -18923,7 +18923,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="modern";
+							value="None";
 						};
 					};
 				};
@@ -19011,8 +19011,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={173.64581,282.23267,2350.248};
-				angles[]={0.16333175,0,5.9207382};
+				position[]={173.646,282.23257,2350.248};
+				angles[]={0.1633279,0,5.920733};
 			};
 			id=1173;
 			type="ALiVE_require";
@@ -19090,7 +19090,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="kick";
+							value="warning";
 						};
 					};
 				};
@@ -19570,12 +19570,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={192.59888,266.93152,2430.2314};
-				angles[]={0.0064130607,0,6.0735106};
+				position[]={192.599,266.93143,2430.231};
+				angles[]={0.0064053587,0,6.0735188};
 			};
 			id=1177;
 			type="ALiVE_amb_civ_population";
-			atlOffset=3.0517578e-005;
+			atlOffset=-3.0517578e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -19836,7 +19836,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="";
+							value="caf_ag_me_t";
 						};
 					};
 				};
@@ -19988,7 +19988,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="caf_ag_me_t";
+							value="";
 						};
 					};
 				};
@@ -20212,7 +20212,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="99999";
+							value="1000";
 						};
 					};
 				};
@@ -20345,7 +20345,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="700";
+							value="800";
 						};
 					};
 				};
@@ -20402,7 +20402,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0";
+							value="450";
 						};
 					};
 				};
@@ -20433,12 +20433,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={836.08649,279.7514,2338.7588};
-				angles[]={6.0310688,0,0.16333175};
+				position[]={836.086,279.75131,2338.759};
+				angles[]={6.0310721,0,0.1633279};
 			};
 			id=1180;
 			type="ALiVE_mil_ied";
-			atlOffset=0.00012207031;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -20715,12 +20714,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={837.75751,267.11865,2249.3369};
-				angles[]={6.2464046,0,0.12888163};
+				position[]={837.758,267.11902,2249.3369};
+				angles[]={6.2464113,0,0.12887511};
 			};
 			id=1181;
 			type="ALiVE_SUP_PLAYER_RESUPPLY";
-			atlOffset=-0.0002746582;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -20814,7 +20812,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="false";
+							value="true";
 						};
 					};
 				};
@@ -20852,7 +20850,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="false";
+							value="true";
 						};
 					};
 				};
