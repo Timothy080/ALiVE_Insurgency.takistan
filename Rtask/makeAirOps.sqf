@@ -55,25 +55,25 @@ fn_spawnArtyMission = {
 	_camonet1 = createVehicle ["CamoNet_OPFOR_big_F", getPos _arty1, [], 0, "CAN_COLLIDE"];
 	_camonet2 = createVehicle ["CamoNet_OPFOR_big_F", getPos _arty2, [], 0, "CAN_COLLIDE"];
 	
-	_armor = createGroup INDEPENDENT;
-	_crew1 = _armor createUnit ["LOP_ISTS_Infantry_Engineer", [0,0,1], [], 0, "CAN_COLLIDE"];
+	_armor = createGroup OPFOR;
+	_crew1 = _armor createUnit ["CAF_AG_ME_T_AK47", [0,0,1], [], 0, "CAN_COLLIDE"];
 	_crew1 moveInDriver _arty1;
-	_crew2 = _armor createUnit ["LOP_ISTS_Infantry_Engineer", [0,0,1], [], 0, "CAN_COLLIDE"];
+	_crew2 = _armor createUnit ["CAF_AG_ME_T_AK47", [0,0,1], [], 0, "CAN_COLLIDE"];
 	_crew2 moveInDriver _arty2;
 	
-	_grp1A = [getMarkerPos _markerAO, INDEPENDENT, (configfile >> "CfgGroups" >> "INDEP" >> "LOP_ISTS" >> "Infantry" >> "LOP_ISTS_Patrol_section")] call BIS_fnc_spawnGroup;
+	_grp1A = [getMarkerPos _markerAO, OPFOR, (configfile >> "CfgGroups" >> "INDEP" >> "caf_ag_me_t" >> "Infantry" >> "LOP_ISTS_Patrol_section")] call BIS_fnc_spawnGroup;
 	nul = [_grp1A,getPos _radiohq] call BIS_fnc_taskDefend;
 	
-	_cars1 = createGroup INDEPENDENT;
-	[_newPos3, 10, "LOP_ISTS_Offroad_M2", _cars1] call BIS_fnc_spawnvehicle;
+	_cars1 = createGroup OPFOR;
+	[_newPos3, 10, "CAF_AG_ME_T_Offroad_armed_01", _cars1] call BIS_fnc_spawnvehicle;
 	nul = [_cars1,getPos _arty1, 300] call BIS_fnc_taskPatrol;
 	sleep 10;
-	[_newPos3, 10, "LOP_ISTS_Offroad_M2", _cars1] call BIS_fnc_spawnvehicle;
+	[_newPos3, 10, "CAF_AG_ME_T_Offroad_armed_01", _cars1] call BIS_fnc_spawnvehicle;
 	
-//	_truck1 = createVehicle ["LOP_ISTS_Offroad_M2",_newPos3,[], 0, "NONE"];
+//	_truck1 = createVehicle ["CAF_AG_ME_T_Offroad_armed_01",_newPos3,[], 0, "NONE"];
 
-//	_convoy2 = createGroup INDEPENDENT;
-//	_driver1 = _convoy2 createUnit ["LOP_ISTS_Infantry_Engineer", [0,0,1], [], 0, "CAN_COLLIDE"];
+//	_convoy2 = createGroup OPFOR;
+//	_driver1 = _convoy2 createUnit ["CAF_AG_ME_T_AK47", [0,0,1], [], 0, "CAN_COLLIDE"];
 //	_driver1 moveInDriver _truck1;
 //	nul = [_convoy2,getPos _arty1, 300] call BIS_fnc_taskPatrol;
 //	
@@ -135,17 +135,17 @@ fn_spawnCasMission = {
 	
 	_mhq = createVehicle ["BRDM2_HQ_TK_GUE_unfolded_Base_EP1",[(getMarkerpos _markerAO select 0) + 1, getMarkerpos _markerAO select 1,0],[], 0, "NONE"];
 	
-	_tanques1 = createGroup INDEPENDENT;
-	[_newPos, 10, "LOP_ISTS_T72BA", _tanques1] call BIS_fnc_spawnvehicle;
+	_tanques1 = createGroup OPFOR;
+	[_newPos, 10, "RDS_T72_CAG_ME_05", _tanques1] call BIS_fnc_spawnvehicle;
 	nul = [_tanques1,getPos _mhq, 150] call BIS_fnc_taskPatrol;
 	sleep 10;
-	[_newPos, 10, "LOP_ISTS_T72BA", _tanques1] call BIS_fnc_spawnvehicle;
+	[_newPos, 10, "RDS_T72_CAG_ME_05", _tanques1] call BIS_fnc_spawnvehicle;
 	sleep 10;
-	[_newPos, 10, "LOP_ISTS_BTR60", _tanques1] call BIS_fnc_spawnvehicle;
+	[_newPos, 10, "RDS_BMP2_CAG_ME_03", _tanques1] call BIS_fnc_spawnvehicle;
 	sleep 10;
-	[_newPos, 10, "LOP_ISTS_BTR60", _tanques1] call BIS_fnc_spawnvehicle;
+	[_newPos, 10, "RDS_BMP2_CAG_ME_03", _tanques1] call BIS_fnc_spawnvehicle;
 	sleep 10;
-	[_newPos, 10, "LOP_ISTS_BTR60", _tanques1] call BIS_fnc_spawnvehicle;
+	[_newPos, 10, "RDS_BMP2_CAG_ME_03", _tanques1] call BIS_fnc_spawnvehicle;
 	
 	_null = [west, "mob_cas", ["Destroy the OPFOR armor platoon", "Destroy Armor", "Destroy Armor"], getMarkerPos "mob_cas", false] spawn BIS_fnc_taskCreate;
 	_null = ["mob_cas", "CREATED"] spawn BIS_fnc_taskSetState;
@@ -193,17 +193,17 @@ fn_spawnConvoyMission = {
 	
 	_shed2 = createVehicle ["BRDM2_HQ_TK_GUE_unfolded_Base_EP1",[(getMarkerpos _markerAO select 0) + 10, getMarkerpos _markerAO select 1,0],[], 0, "NONE"];
 	
-	_convoy1 = createGroup INDEPENDENT;
-	[_newPos, 10, "LOP_ISTS_BTR60", _convoy1] call BIS_fnc_spawnvehicle;
+	_convoy1 = createGroup OPFOR;
+	[_newPos, 10, "RDS_BMP2_CAG_ME_03", _convoy1] call BIS_fnc_spawnvehicle;
 	nul = [_convoy1,getPos _shed2, 300] call BIS_fnc_taskPatrol;
 	sleep 15;
-	[_newPos, 10, "LOP_AM_Landrover", _convoy1] call BIS_fnc_spawnvehicle;
+	[_newPos, 10, "CAF_AG_ME_T_Offroad", _convoy1] call BIS_fnc_spawnvehicle;
 	sleep 15;
-	[_newPos, 10, "LOP_AM_Landrover", _convoy1] call BIS_fnc_spawnvehicle;
+	[_newPos, 10, "CAF_AG_ME_T_Offroad", _convoy1] call BIS_fnc_spawnvehicle;
 	sleep 15;
-	[_newPos, 10, "LOP_AM_Landrover", _convoy1] call BIS_fnc_spawnvehicle;
+	[_newPos, 10, "CAF_AG_ME_T_Offroad", _convoy1] call BIS_fnc_spawnvehicle;
 	sleep 15;
-	[_newPos, 10, "LOP_AM_Landrover_M2", _convoy1] call BIS_fnc_spawnvehicle;
+	[_newPos, 10, "CAF_AG_ME_T_Offroad_armed_01", _convoy1] call BIS_fnc_spawnvehicle;
 	
 	_null = [west, "mob_convoy", ["Attack and destroy the supply convoy", "Eliminate Convoy", "Eliminate Convoy"], getMarkerPos "mob_convoy", false] spawn BIS_fnc_taskCreate;
 	_null = ["mob_convoy", "CREATED"] spawn BIS_fnc_taskSetState;
@@ -257,16 +257,16 @@ fn_spawnPlacementMission = {
 	_markerwarehouse setMarkerSize [1,1];
 	_markerwarehouse setMarkerText "Insurgent Depot";
 	
-	_truck1 = createVehicle ["LOP_AM_Landrover",[(getPos _warehouse select 0) + 15, getPos _warehouse select 1,0],[], 0, "NONE"];
+	_truck1 = createVehicle ["CAF_AG_ME_T_Offroad",[(getPos _warehouse select 0) + 15, getPos _warehouse select 1,0],[], 0, "NONE"];
 	
-	_grp1A = [getPos _warehouse, INDEPENDENT, (configfile >> "CfgGroups" >> "INDEP" >> "LOP_IT" >> "Infantry" >> "LOP_ISTS_Rifle_squad")] call BIS_fnc_spawnGroup;
+	_grp1A = [getPos _warehouse, OPFOR, (configfile >> "CfgGroups" >> "OPFOR" >> "LOP_IT" >> "Infantry" >> "LOP_ISTS_Rifle_squad")] call BIS_fnc_spawnGroup;
 	nul = [_grp1A,getpos _warehouse] call BIS_fnc_taskDefend;
 	
-	_AA2 = createGroup INDEPENDENT;
-	[_newPos, 10, "LOP_ISTS_Offroad_M2", _AA2] call BIS_fnc_spawnvehicle;
+	_AA2 = createGroup OPFOR;
+	[_newPos, 10, "CAF_AG_ME_T_Offroad_armed_01", _AA2] call BIS_fnc_spawnvehicle;
 	nul = [_AA2,getPos _warehouse, 150] call BIS_fnc_taskPatrol;
 	sleep 15;
-	[_newPos, 10, "LOP_ISTS_Offroad_M2", _AA2] call BIS_fnc_spawnvehicle;
+	[_newPos, 10, "CAF_AG_ME_T_Offroad_armed_01", _AA2] call BIS_fnc_spawnvehicle;
 	
 	_null = [west, "mob_placement", ["Eliminate the OPFOR Depot.", "Eliminate Depot", "Eliminate Depot"], getMarkerPos "warehousemarker", false] spawn BIS_fnc_taskCreate;
 	_null = ["mob_placement", "CREATED"] spawn BIS_fnc_taskSetState;

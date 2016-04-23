@@ -35,17 +35,6 @@ player createDiaryRecord [
 player createDiaryRecord [
 	"Diary", 
 	[
-		"ZEUS", 
-		"<br/><br/>
-		<br/>The commander can use ZEUS for various tasks and is assigned as a game master,
-		<br/>Editing Area around MHQ now is 50 meters,
-		<br/>My thanks to Nashable for give me permission to use nash_zeus_mhq script."
-	]
-];
-
-player createDiaryRecord [
-	"Diary", 
-	[
 		"NOTES", 
 		"<br/><br/>There are two respawn points <marker name='respawn_west'>Loy Manara AB</marker> and <marker name='respawn_west_1'>Garmsar FSB</marker>,
 		<br/>New BIS Revive function,
