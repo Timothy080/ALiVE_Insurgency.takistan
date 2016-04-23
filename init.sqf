@@ -16,7 +16,6 @@ call compile preprocessFileLineNumbers "removeTasks.sqf";
 //------------------------------//
 
 //Scripts-----------------------//
-[] execVM "bon_recruit_units\init.sqf";
 [] execVM "scripts\prayer.sqf";
 [] execVM "staticData.sqf";
 //------------------------------//

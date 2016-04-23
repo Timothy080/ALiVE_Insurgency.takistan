@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8151.6201,428.78513,2026.7242};
-		dir[]={-0.55098718,-0.78763157,-0.27599922};
-		up[]={-0.70422834,0.6161468,-0.35276195};
-		aside[]={-0.44790593,-3.6404526e-007,0.8941651};
+		pos[]={10515.936,298.03748,6452.1006};
+		dir[]={-0.83125412,-0.45254287,0.32287532};
+		up[]={-0.421855,0.8917315,0.16385673};
+		aside[]={0.36207029,1.8998981e-007,0.93216616};
 	};
 };
 binarizationWanted=0;
@@ -12411,18 +12411,41 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8273.0732,300.01682,2110.6255};
-				angles[]={0,6.2510576,0};
+				position[]={8273.0732,300.01682,2110.625};
+				angles[]={0,6.2510538,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this addAction [""<t color='#FFFF00'>Recruit Units</t>"",""bon_recruit_units\open_dialog.sqf""]; this addAction[""<t color='#0000FF'>HALO</t>"", ""ATM_airdrop\atm_airdrop.sqf""]; this allowdamage false;";
+				init="this addAction[""<t color='#0000FF'>HALO</t>"", ""ATM_airdrop\atm_airdrop.sqf""]; this allowdamage false;";
 			};
 			id=753;
 			type="Flag_NATO_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item712
 		{
@@ -15388,19 +15411,42 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10495.183,265.93616,6455.2222};
-				angles[]={6.244801,0,0.049559005};
+				position[]={10495.183,265.9364,6455.2222};
+				angles[]={6.2448053,0,0.049567349};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this addAction [""Recruit Units"",""bon_recruit_units\open_dialog.sqf""]; this allowdamage false;";
+				init="this allowdamage false;";
 			};
 			id=921;
 			type="Flag_NATO_F";
-			atlOffset=0.0077819824;
+			atlOffset=0.008026123;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item878
 		{
