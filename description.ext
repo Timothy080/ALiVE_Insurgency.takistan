@@ -2,8 +2,9 @@
 //--ALiVE TAKISTAN NATOFOR--//
 //-------By M4RT14L---------//
 //////////////////////////////
-#include "Rtask\defines.hpp"
-#include "Rtask\dialogs.hpp"
+
+//#include "Rtask\defines.hpp"
+//#include "Rtask\dialogs.hpp"
 #include <SpyderCivInteraction\civilianInteraction.hpp>
 
 class Header
@@ -15,7 +16,7 @@ class Header
 };
 
 author = "M4RT14L";
-onLoadName = "TAKISTAN - NFOR";
+onLoadName = "TAKISTAN INSURGENCY";
 onLoadMission = "Terrorist forces try to gain control of Takistan and enter the fight to drive out Task Force TRIUMPH";
 loadScreen = "pics\logo.jpg";
 
@@ -30,9 +31,6 @@ respawn = 3;
 respawnOnStart = 1;
 respawnDelay = 15;
 respawnTemplates[] = {"Revive","MenuPosition"};
-reviveDelay = 15;
-reviveForceRespawnDelay = 3;
-reviveBleedOutDelay = 120;  
 
 class CfgNotifications
 {
