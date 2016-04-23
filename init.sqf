@@ -14,7 +14,7 @@ call compile preprocessFileLineNumbers "removeTasks.sqf";
 //------------------------------//
 
 //Scripts-----------------------//
-[] execVM "scripts\prayer.sqf";
+//[] execVM "scripts\prayer.sqf";
 [] execVM "staticData.sqf";
 //------------------------------//
   
