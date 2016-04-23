@@ -3,8 +3,6 @@
 //-------By M4RT14L---------//
 //////////////////////////////
 
-#include "bon_recruit_units\dialog\common.hpp"
-#include "bon_recruit_units\dialog\recruitment.hpp"
 #include "ATM_airdrop\dialog.hpp"
 #include "Rtask\defines.hpp"
 #include "Rtask\dialogs.hpp"
