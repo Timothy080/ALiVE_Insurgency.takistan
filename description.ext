@@ -1,0 +1,146 @@
+//////////////////////////////
+//--ALiVE TAKISTAN NATOFOR--//
+//-------By M4RT14L---------//
+//////////////////////////////
+
+#include "bon_recruit_units\dialog\common.hpp"
+#include "bon_recruit_units\dialog\recruitment.hpp"
+#include "ATM_airdrop\dialog.hpp"
+#include "Rtask\defines.hpp"
+#include "Rtask\dialogs.hpp"
+#include <SpyderCivInteraction\civilianInteraction.hpp>
+
+class Header
+{
+	gameType = COOP;
+	minPlayers = 1;
+	maxPlayers = 33;
+	playerCountMultipleOf = 1;
+};
+
+author = "M4RT14L";
+onLoadName = "TAKISTAN - NFOR";
+onLoadMission = "Terrorist forces try to gain control of Takistan and enter the fight to drive out Task Force TRIUMPH";
+loadScreen = "pics\logo.jpg";
+
+aiKills = 0;
+briefing = 1;
+debriefing = 1;
+disabledAI = 1;
+enableDebugConsole = 1;
+allowFunctionsRecompile = 1;
+allowFunctionsLog = 0;
+respawn = 3;
+respawnOnStart = 1;
+respawnDelay = 15;
+respawnTemplates[] = {"Revive","MenuPosition"};
+reviveDelay = 15;
+reviveForceRespawnDelay = 3;
+reviveBleedOutDelay = 120;  
+
+class CfgNotifications
+{
+	class Default
+	{
+		title = "";
+		iconPicture = "";
+		iconText = "";
+		description = "";
+		color[] = {1,1,1,1};
+		duration = 5;
+		priority = 0;
+		difficulty[] = {};
+	};
+	class TaskAssigned
+	{
+		title = "TASK ASSIGNED";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+		description = "%2";
+		color[] = {1,1,1,1};
+		priority = 4;
+	};
+	class TaskSucceeded
+	{
+		title = "TASK SUCCEEDED";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+		description = "%2";
+		color[] = {0.6,0.8,0.4,1};
+		priority = 3;
+	};
+	class TaskFailed
+	{
+		title = "TASK FAILED";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+		description = "%2";
+		color[] = {1,0.1,0,1};
+		priority = 2;
+	};
+	class TaskCanceled
+	{
+		title = "TASK CANCELED";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+		description = "%2";
+		color[] = {0.75,0.75,0.75,1};
+		priority = 1;
+	};
+	class TaskCreated
+	{
+		title = "TASK CREATED";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+		description = "%2";
+		color[] = {1,1,1,1};
+		priority = 5;
+	};
+	
+};
+
+class CfgSounds
+{
+   sounds[] = {Vent,Vent2,Para,muezzin};
+
+	class Vent {name="Vent";sound[]={ATM_airdrop\data\Vent.ogg,db-11,1.0};titles[] = {};};
+	class Vent2 {name="Vent2";sound[]={ATM_airdrop\data\Vent2.ogg,db-11,1.0};titles[] = {};};
+	class Para {name="Para";sound[]={ATM_airdrop\data\parachute.ogg,db-11,1.0};titles[] = {};};
+	class muezzin {name="muezzin";sound[]={sound\muezzin.ogg,db+10,1.0};titles[] = {};};
+
+};
+
+class Params {
+	class STARTTIME {
+		title = "Mission Start Time";
+		values[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24};
+		texts[] = {
+			"1:00","2:00","3:00","4:00","5:00","6:00","7:00","8:00","9:00","10:00","11:00","12:00",
+			"13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00","24:00"
+		};
+		default = 8;
+		function = "BIS_fnc_paramDaytime";
+	};
+};
+
+class CfgCommunicationMenu
+{
+    class OpsMenu
+    {
+        text = "Operations Menu";
+	  expression = "CreateDialog 'M4RT14L_DIALOG'";
+        icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\call_ca.paa";
+        cursor = "\a3\Ui_f\data\IGUI\Cfg\Cursors\iconCursorSupport_ca.paa";
+        enable = "1";
+        removeAfterExpressionCall = 0;
+    };
+};
+
+class CfgFunctions {
+	#include "SpyderCivInteraction\cfgfunctions.hpp"
+};
+
+class Extended_Init_EventHandlers {
+	class Man {
+		class Spyder_EHMan {
+			init = "_this execVM 'ehMan.sqf'";
+		};
+	};
+};
+
+
