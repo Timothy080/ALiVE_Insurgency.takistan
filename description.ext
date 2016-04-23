@@ -2,8 +2,6 @@
 //--ALiVE TAKISTAN NATOFOR--//
 //-------By M4RT14L---------//
 //////////////////////////////
-
-#include "ATM_airdrop\dialog.hpp"
 #include "Rtask\defines.hpp"
 #include "Rtask\dialogs.hpp"
 #include <SpyderCivInteraction\civilianInteraction.hpp>
@@ -99,8 +97,6 @@ class CfgSounds
 	class Vent {name="Vent";sound[]={ATM_airdrop\data\Vent.ogg,db-11,1.0};titles[] = {};};
 	class Vent2 {name="Vent2";sound[]={ATM_airdrop\data\Vent2.ogg,db-11,1.0};titles[] = {};};
 	class Para {name="Para";sound[]={ATM_airdrop\data\parachute.ogg,db-11,1.0};titles[] = {};};
-	class muezzin {name="muezzin";sound[]={sound\muezzin.ogg,db+10,1.0};titles[] = {};};
-
 };
 
 class Params {

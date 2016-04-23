@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8141.938,352.36197,1935.5188};
-		dir[]={-0.69078255,-0.17253456,-0.70234156};
-		up[]={-0.12110946,0.98494565,-0.12313697};
-		aside[]={-0.7130298,-4.7282083e-007,0.70129198};
+		pos[]={8277.3525,316.59915,2101.0745};
+		dir[]={-0.21730031,-0.77840459,0.58915746};
+		up[]={-0.26936781,0.6276831,0.73032755};
+		aside[]={0.93831259,-1.5217229e-006,0.34608278};
 	};
 };
 binarizationWanted=0;
@@ -242,7 +242,7 @@ class Mission
 			colorName="ColorWEST";
 			a=0.75;
 			b=0.75;
-			angle=359.33893;
+			angle=359.3389;
 			id=8;
 		};
 		class Item8
@@ -697,7 +697,7 @@ class Mission
 			colorName="ColorWEST";
 			a=0.75;
 			b=0.75;
-			angle=152.99995;
+			angle=152.99994;
 			id=56;
 		};
 		class Item56
@@ -803,7 +803,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={7803.2397,296.04001,1773.455};
-			angle=5.7595849;
+			angle=5.7595844;
 			class Attributes
 			{
 				condition="(""Air"" countType thislist  > 0) && ((getpos (thislist select 0)) select 2 < 1)";
@@ -12424,7 +12424,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this addAction[""<t color='#0000FF'>HALO</t>"", ""ATM_airdrop\atm_airdrop.sqf""]; this allowdamage false;";
+				init="this allowdamage false;";
 			};
 			id=753;
 			type="Flag_NATO_F";
@@ -24597,7 +24597,7 @@ class Mission
 			};
 			id=1237;
 			type="rhsusf_m113d_usarmy";
-			atlOffset=6.1035156e-005;
+			atlOffset=3.0517578e-005;
 		};
 		class Item1095
 		{
@@ -24614,6 +24614,7 @@ class Mission
 			};
 			id=1238;
 			type="rhsusf_m113d_usarmy";
+			atlOffset=-3.0517578e-005;
 		};
 		class Item1096
 		{
@@ -24748,7 +24749,7 @@ class Mission
 			};
 			id=1253;
 			type="RHS_UH60M_d";
-			atlOffset=0.00021362305;
+			atlOffset=-0.01651001;
 		};
 		class Item1104
 		{
@@ -24918,6 +24919,7 @@ class Mission
 			};
 			id=1267;
 			type="RHS_A10";
+			atlOffset=-0.00021362305;
 		};
 		class Item1114
 		{
@@ -24934,6 +24936,7 @@ class Mission
 			};
 			id=1269;
 			type="RHS_A10";
+			atlOffset=-0.00021362305;
 		};
 		class Item1115
 		{

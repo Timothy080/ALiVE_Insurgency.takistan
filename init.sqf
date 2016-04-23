@@ -4,7 +4,6 @@
 //////////////////////////////
 
 ["init",["WEST","LOP_AM"]] call SCI_fnc_civilianInteraction;
-
 #include "initBriefing.hpp";
 enableSaving [false,false];
 
